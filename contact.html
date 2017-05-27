@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Forvid</title>
+    <title>My Website</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
-<div class="wrapper">
+
 	<header>
 		<div class="container">
 
@@ -29,41 +29,32 @@
 		</div>
 	</header>
 
-	<section class="hero">
-		<div class="hero__text">
-			<h1 class="hero__title">Welcome to Forvid</h1>
-			<p>Bij Forvid maken we video's speciaal voor u!</p>
-			<a href="contact.html" class="hero__button">Contact Us!</a>
-		</div>
-	</section>
-	
 	<div class="container content">
-		<div class="grid__row">
-			<div class="grid__column-12">
-				<h2>Recente Werken</h2>
-			</div>
-		</div>
-
+		<h2>Contacteer ons!</h2>
 		<div class="grid__row">
 			<div class="grid__column-6">
-				<div class="video">
-					<a href="https://vimeo.com/215425155"><img src="assets/recent_alive.jpg" alt="alive stopmotion" class="recent"></a>
-					<h3>Alive.</h3>
-					<p>Een one minute stopmotion filmpje dat gaat over twee ronde monstertjes die door een magische wolk tot leven gebracht worden.</p>
-				</div>
+				<form>
+					Naam: <br>
+					<input type="text" name="achternaam" class="text__box" placeholder="Achternaam..."> <br>
+					Voornaam: <br>
+					<input type="text" name="voornaam" class="text__box" placeholder="Voornaam..."> <br>
+					E-mail: <br>
+					<input type="text" name="email" class="text__box" placeholder="E-mail..."> <br>
+					Onderwerp: <br>
+					<input type="text" name="onderwerp" class="text__box" placeholder="Onderwerp..."> <br>
+					Bericht: <br>
+					<textarea name="message" rows="10" cols="30" class="text__box bericht" placeholder="Vertel ons over je idee..."></textarea>
+					<button type="button" onclick="alert('Bericht is verstuurd!')" class="send">Verstuur</button>
+				</form>
 			</div>
 			<div class="grid__column-6">
-				<div class="video">
-					<a href=""><img src="assets/recent_animatie.jpg" alt="kinetic typography" class="recent"></a>
-					<h3>Kinetic Typography</h3>
-					<p>Een kinetische typografische animatie met de tekst van de trailer van de populaire game "Minecraft".</p>
-				</div>
+				<div id="map"></div>
 			</div>
 		</div>
 	</div>
 
 
-		<div class="footer-wrapper">
+	<div class="footer-wrapper">
 			<div class="container">
 				<div class="grid__row">
 					<footer class="footer">
@@ -98,6 +89,9 @@
 				</div>
 			</div>
 		</div>
-</div>
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbQVl9PHsoDZOqJS_ID42jbuJe54zipCY&callback=initMap"></script>
+
 </body>
 </html>
